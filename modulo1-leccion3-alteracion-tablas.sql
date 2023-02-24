@@ -1,3 +1,6 @@
+#  PAIR PROGRAMMING ALTERACIÓN DE TABLAS
+-- -------------------------------------
+
 /*ENUNCIADO
 Seguimos trabajando con la BBDD que creamos en la sesión de pair programming anterior.
 Revisando nuestras tablas nos hemos dado cuenta que algunas tienen algunos errores.
