@@ -23,11 +23,11 @@ Ejercicios de la lección 1 de MySQL: Modelo relacional
 
 - **La base de datos Northwind está compuesta por múltiples tablas con relaciones entre ellas. En este momento del curso lo más probable es que no dispongáis de los conocimientos necesarios para inspeccionar el script de creación de la base de datos y entenderlo. Aún así, os invito a que lo leais tranquilamente intentado haceros una idea de qué hace cada una de las instrucciones. Este ejercicio es interesante, porque al finalizar el curso podréis volver a hacerlo y os daréis cuenta de lo mucho que habéis avanzado.**
 
-    Aquí tenemos que escribir cuánto hemos entendido más o menos del script. Yo (Lidya) reconozco que no entiendo casi nada, reconozco algunas estructuras y me imagino para qué sirven algunos de los comandos pero podría estar equivocadísima. 
+    Aquí tenemos que escribir cuánto hemos entendido más o menos del script. En realidad, no entendemos casi nada, reconocemos algunas estructuras y nos imaginamos para qué sirven algunos de los comandos pero podríamos estar equivocadísimas. 
 
 -  **Una vez importada la base de datos, podéis utilizar MySQL Workbench para ir viendo qué tablas componen la base de datos y qué columnas/atributos tiene cada una de ellas. Así podréis interiorizar la estructura de Northwind y más adelante tendréis más facilidad a la hora de diseñar las consultas SQL sobre la base de datos.**
 
-    Aquí tenemos que ponerlo cuando hayamos cotilleado las tablas de la base de datos. Yo (Lidya), a día 25/2/23 aún no he podido explorarlas demasiado. Actualizaré esto cuando ocurra.
+    Aquí tenemos que ponerlo cuando hayamos cotilleado las tablas de la base de datos. A día 25/2/23 aún no hemos podido explorarlas demasiado. Actualizaremos esto cuando ocurra.
 
 **4. Entiende el objetivo de los ejercicios**
 
