@@ -17,28 +17,33 @@ En este ejercicio vamos a corregir los errores que hemos encontrado en nuestras 
 	-- talla: es un entero, no nulo.
     
     ALTER TABLE zapatillas
-    ADD COLUMN marca VARCHAR(45) NOT NULL,
-    ADD COLUMN talla INT NOT NULL;
+		ADD COLUMN marca VARCHAR(45) NOT NULL,
+		ADD COLUMN talla INT NOT NULL;
     
 -- Tabla Empleados
 	-- salario: es un entero, no nulo. Pero puede que el salario de nuestros empleados tenga decimales, por lo que le cambiaremos el tipo a decimal.
+
+# LO DE CLASE:    
+#    ALTER TABLE empleados
+#		ADD COLUMN salario INT NOT NULL;
     
-    ALTER TABLE empleados
-    ADD COLUMN salario INT NOT NULL;
-    
-    ALTER TABLE empleados
-    MODIFY COLUMN salario FLOAT;
+#    ALTER TABLE empleados
+#		MODIFY COLUMN salario FLOAT;
+
+# CREO QUE LA COLUMNA YA ESTABA CREADA ASÍ QUE SERÍA ESTO???:
+#    ALTER TABLE empleados
+#		MODIFY COLUMN salario FLOAT NOT NULL
     
 -- Tabla Clientes
 	-- pais: la hemos incluido en la tabla pero nuestro negocio solo distribuye a España, por lo que es una columna que no hará falta. La eliminaremos.
-	-- codigo_postal: es un string, pero esto no tiene mucho ya que son números de longitud fija de 5 caracteres. Por lo tanto, cambiaremos el tipo a entero de longitud 5.
+	-- codigo_postal: es un string, pero esto no tiene mucho sentido ya que son números de longitud fija de 5 caracteres. Por lo tanto, cambiaremos el tipo a entero de longitud 5.
     
     ALTER TABLE clientes
-    DROP COLUMN pais,
-    MODIFY COLUMN codigo_postal INT(5);
+		DROP COLUMN pais,
+		MODIFY COLUMN codigo_postal INT(5);
 
 -- Tabla Facturas:
 	-- total: madre mía!!! Se nos ha olvidado incluir el total de la cada factura generada😨!Creemos esa columna con un tipo de datos decimal.
     
     ALTER TABLE facturas
-    ADD COLUMN total FLOAT;
+		ADD COLUMN total FLOAT;
