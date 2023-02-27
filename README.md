@@ -1,4 +1,4 @@
-# **Este es el repositorio de Maitane y Lidya**
+# **Este es el repositorio de Maitane, Lorena y Lidya**
 ## **Lo usamos para guardar nuestro trabajo en pair programming durante el Módulo 1**
 ### Esperamos que os guste :)
 ---
