@@ -6,7 +6,11 @@ INSERT INTO zapatillas (modelo, color, marca, talla)
 	VALUES ('XQYUN', 'Negro', 'Nike', 42),
     ('UOPMN','Rosas', 'Nike', 39),
     ('OPNYT', 'Verdes', 'Adidas', 35);
-    
+
+#Para insertar los datos tal cual aparecen en el ejercicio, vamos a modificar la tabla:
+ALTER TABLE empleados
+	MODIFY COLUMN salario FLOAT; 
+
 INSERT INTO empleados (nombre, tienda, salario, fecha_incorporacion)
 	VALUES ('Laura', 'Alcobendas', 25987, '2010-09-03'),
     ('Maria','Sevilla', NULL, '2001-04-11'),
@@ -17,10 +21,11 @@ INSERT INTO clientes (nombre, numero_telefono, email, direccion, ciudad, provinc
     ('Lorena',289345678, 'lorena@email.com', 'Calle Alegría', 'Barcelona', 'Barcelona', 12346),
     ('Carmen', 298463759, 'carmen@email.com', 'Calle del Color', 'Vigo', 'Pontevedra', 23456);
     
+    #Nos da 'Error', pues se encuentra con las fk
 INSERT INTO facturas (numero_factura, fecha, id_zapatilla, id_empleado, id_cliente, total)
-	VALUES (123, 2001-12-11, 1, 2, 1, 54.98),
-	(1234, 2005-05-23, 1 , 1, 3, 89.91),
-	(12345, 2015-09-18, 2, 3, 3, 76.23); 
+	VALUES (123, '2001-12-11', 1, 2, 1, 54.98),
+			(1234, '2005-05-23', 1 , 1, 3, 89.91),
+			(12345, '2015-09-18', 2, 3, 3, 76.23); 
 
 # 2. De nuevo nos hemos dado cuenta que hay algunos errores en la inserción de datos. En este ejercicios los actualizaremos para que nuestra BBDD este perfectita.
 

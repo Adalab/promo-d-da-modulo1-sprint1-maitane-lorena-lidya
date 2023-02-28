@@ -1,0 +1,1 @@
+SELECT * FROM tienda_zapatillas.empleados;
