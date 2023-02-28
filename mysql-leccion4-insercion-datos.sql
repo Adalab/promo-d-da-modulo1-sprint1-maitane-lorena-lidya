@@ -1,4 +1,5 @@
-#Actividades
+#  PAIR PROGRAMMING INSERCIÓN DE DATOS
+-- -------------------------------------
 USE tienda_zapatillas; 
 
 # 1. Lo primero que vamos a hacer es insertar datos en nuestra BBDD con los siguientes datos (EXTRAER DATOS DEL GITBOOK):
