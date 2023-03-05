@@ -82,31 +82,32 @@ los pedidos almacenados en la base de datos, si estos sufrieran un retraso de 5 
 como FechaRetrasada.
 💡 Pista 💡 Para realizar lo anterior, busca documentación de la función DATE_ADD para MySQL.*/
 
-SELECT order_id, shipped_date, DATEADD(day,5,shipped_date) AS FechaRetrasada  
+SELECT DATE_ADD(shipped_date, INTERVAL 5 DAY) AS FechaRetrasada  
 	FROM orders;  
+ 
+ # OTROS INTENTOS QUE DAN ERROR. ¿BORRAR TODOS?
+#SELECT SalesOrderID  
+#	,OrderDate   
+#	,DATEADD(day,2,OrderDate) AS PromisedShipDate  
+#FROM Sales.SalesOrderHeader; 
     
-SELECT SalesOrderID  
-	,OrderDate   
-	,DATEADD(day,2,OrderDate) AS PromisedShipDate  
-FROM Sales.SalesOrderHeader; 
+#SELECT order_id, shipped_date
+	#FROM orders
+	#WHERE DATE_ADD(CURDATE(),INTERVAL 5 DAY);
+
+#SELECT order_id, shipped_date AS FechaRetrasada
+	#FROM orders
+    #DATE_ADD shipped_date INTERVAL 5 DAY;
     
-SELECT order_id, shipped_date
-	FROM orders
-	WHERE DATE_ADD(CURDATE(),INTERVAL 5 DAY);
+#SELECT DATE_ADD("d", 5, @shipped_date) AS FechaRetrasada FROM orders;
 
-SELECT order_id, shipped_date AS FechaRetrasada
-	FROM orders
-    DATE_ADD shipped_date INTERVAL 5 DAY;
-    
-SELECT DATE_ADD("d", 5, @shipped_date) AS FechaRetrasada FROM orders;
+#SELECT 'day' (day, 5, @shipped_date)FROM orders;
 
-SELECT 'day' (day, 5, @shipped_date)FROM orders;
+#SELECT DateAdd("YYYY",1,[DateofSale]) AS Expr1 FROM ProductSales; 
 
-SELECT DateAdd("YYYY",1,[DateofSale]) AS Expr1 FROM ProductSales; 
-
- SELECT order_id, shipped_date AS FechaRetrasada
-	FROM orders
-    WHERE DATE_ADD (shipped_date, INTERVAL 5 DAY); 
+# SELECT order_id, shipped_date AS FechaRetrasada
+	#FROM orders
+   # WHERE DATE_ADD (shipped_date, INTERVAL 5 DAY); 
     
 
 /* 9. Selecciona los productos más rentables:
