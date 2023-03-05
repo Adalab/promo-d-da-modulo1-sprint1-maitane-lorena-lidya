@@ -73,7 +73,6 @@ de la empresa. Queremos que la lista de resultado sea renombrada como "NombreDeC
 SELECT category_name AS NombreDeCategoria
 	FROM categories;
     
-
 /* 8. Selecciona envios con retraso:
 Nos hacen llegar desde la dirección la preocupación acerca del cumplimiento de las fechas de envío. Últimamente se están dando 
 retrasos en muchas entregas y por ello se busca realizar la acción preventiva de enviar los paquetes con varios días adicionales 
@@ -82,34 +81,9 @@ los pedidos almacenados en la base de datos, si estos sufrieran un retraso de 5 
 como FechaRetrasada.
 💡 Pista 💡 Para realizar lo anterior, busca documentación de la función DATE_ADD para MySQL.*/
 
-SELECT DATE_ADD(shipped_date, INTERVAL 5 DAY) AS FechaRetrasada  
+SELECT  order_id, DATE_ADD(shipped_date, INTERVAL 5 DAY) AS FechaRetrasada 
 	FROM orders;  
  
- # OTROS INTENTOS QUE DAN ERROR. ¿BORRAR TODOS?
-#SELECT SalesOrderID  
-#	,OrderDate   
-#	,DATEADD(day,2,OrderDate) AS PromisedShipDate  
-#FROM Sales.SalesOrderHeader; 
-    
-#SELECT order_id, shipped_date
-	#FROM orders
-	#WHERE DATE_ADD(CURDATE(),INTERVAL 5 DAY);
-
-#SELECT order_id, shipped_date AS FechaRetrasada
-	#FROM orders
-    #DATE_ADD shipped_date INTERVAL 5 DAY;
-    
-#SELECT DATE_ADD("d", 5, @shipped_date) AS FechaRetrasada FROM orders;
-
-#SELECT 'day' (day, 5, @shipped_date)FROM orders;
-
-#SELECT DateAdd("YYYY",1,[DateofSale]) AS Expr1 FROM ProductSales; 
-
-# SELECT order_id, shipped_date AS FechaRetrasada
-	#FROM orders
-   # WHERE DATE_ADD (shipped_date, INTERVAL 5 DAY); 
-    
-
 /* 9. Selecciona los productos más rentables:
 Gracias a un análisis realizado en los últimos meses en la empresa, se ha comprobado que el rango de productos que puede dar más 
 beneficios parece ser el de aquellos con un precio mayor o igual a 15 dólares, pero menor o igual que 50 dólares. Selecciona los 
