@@ -81,7 +81,7 @@ los pedidos almacenados en la base de datos, si estos sufrieran un retraso de 5 
 como FechaRetrasada.
 💡 Pista 💡 Para realizar lo anterior, busca documentación de la función DATE_ADD para MySQL.*/
 
-SELECT  order_id, DATE_ADD(shipped_date, INTERVAL 5 DAY) AS FechaRetrasada 
+SELECT  order_id, shipped_date, DATE_ADD(shipped_date, INTERVAL 5 DAY) AS FechaRetrasada 
 	FROM orders;  
  
 /* 9. Selecciona los productos más rentables:
