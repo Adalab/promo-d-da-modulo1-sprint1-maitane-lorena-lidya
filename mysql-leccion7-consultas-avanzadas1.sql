@@ -1,17 +1,8 @@
+
 #  PAIR PROGRAMMING CONSULTAS AVANZADAS 1
--- -------------------------------------
+-- --------------------------------------
 
-/* Nota: veréis que os hemos propuesto bastantes ejercicios para cada sesión de pair programming. No hace falta hacerlos todos. 
-Estos ejercicios están pensados para que cada día podáis hacer los primeros ejercicios aunque no hayáis terminado los últimos 
-del día anterior. Cada día debéis hacer los ejercicios de este día, no los que no terminasteis el día anterior.
-
-/* ENUNCIADO
-
-En esta lección de pair programming vamos a continuar trabajando sobre la base de datos Northwind.
-
-El día de hoy vamos a realizar ejercicios en los que practicaremos sentencias SQL usando los operadores MIN, MAX, SUM, AVG, COUNT 
-para agreagar la información extraída de las bases de datos. De esta manera podremos obtener información algo más general acerca 
-de los registros y atributos de las tablas. */
+USE northwind;
 
 /* EJERCICIOS
 

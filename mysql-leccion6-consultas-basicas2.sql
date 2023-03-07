@@ -1,16 +1,8 @@
+
 #  PAIR PROGRAMMING CONSULTAS BÁSICAS 2
 -- -------------------------------------
 
-/* Nota: veréis que os hemos propuesto bastantes ejercicios para cada sesión de pair programming. No hace falta hacerlos todos. 
-Estos ejercicios están pensados para que cada día podáis hacer los primeros ejercicios aunque no hayáis terminado los últimos 
-del día anterior. Cada día debéis hacer los ejercicios de este día, no los que no terminasteis el día anterior. */
-
-/* ENUNCIADO
-En esta lección de pair programming vamos a continuar trabajando sobre la base de datos Northwind.
-Hoy vamos a realizar ejercicios en los que practicaremos sentencias SQL algo más avanzadas en las que introduciremos el uso de 
-operadores como ORDER BY, DISTINCT, LIMIT, OFFSET, BETWEEN, IN y AS. Gracias al uso de estos operadores seréis capaces de 
-seleccionar información mucho más específica de la base de datos, la cual nos va a servir para realizar un análisis más en 
-profundidad del negocio de la empresa. */
+USE northwind;
 
 /* EJERCICIOS 
    1. Conociendo el tipo de productos que vendemos en Northwind:
@@ -58,6 +50,7 @@ SELECT order_id AS ImporteTotal
 /* 6. Los pedidos que están entre las posiciones 5 y 10 de nuestro ranking:
 Ahora, no sabemos bien por qué razón, desde el departamento de Ventas nos piden seleccionar el ID de los pedidos situados entre 
 la 5 y la 10 mejor posición en cuanto al coste económico total ImporteTotal.*/
+
 # Entendemos que el listado que se pide es incluyendo las posiciones 5 y 10.
 
 SELECT order_id
