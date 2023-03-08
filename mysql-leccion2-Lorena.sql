@@ -28,18 +28,19 @@ CREATE TABLE IF NOT EXISTS `Facturas`(
     id_empleado INT NOT NULL,
     id_cliente INT NOT NULL);
     
-ALTER TABLE `Facturas`(
+ALTER TABLE `Facturas`
 	ADD CONSTRAINT `fk_Facturas_clientes`
-		FOREIGN KEY (id_clientes),
-        REFERENCES `clientes`(id_cliente),
-	ON DELETE CASCADE ON UPDATE CASCADE);
-ALTER TABLE `Facturas`(
+		FOREIGN KEY (id_clientes)
+		REFERENCES `clientes`(id_cliente) ON DELETE CASCADE ON UPDATE CASCADE;
+    
+ALTER TABLE `Facturas`
 	ADD CONSTRAINT `fk_Facturas_empleados`
-		FOREIGN KEY (id_empleado),
-        REFERENCES `empleados` (id_empleado),
-         ON DELETE CASCADE ON UPDATE CASCADE);
- ALTER TABLE `zapatillas`(        
+		FOREIGN KEY (id_empleado)
+        REFERENCES `empleados` (id_empleado)
+         ON DELETE CASCADE ON UPDATE CASCADE;
+         
+ ALTER TABLE `zapatillas`  
 	ADD CONSTRAINT `fk_Facturas_zapatillas`
-		FOREIGN KEY(id_zapatilla),
-        REFERENCES `zapatillas`(id_zapatilla),
-        ON DELETE CASCADE ON UPDATE CASCADE);
+		FOREIGN KEY(id_zapatilla)
+        REFERENCES `zapatillas`(id_zapatilla)
+        ON DELETE CASCADE ON UPDATE CASCADE;
